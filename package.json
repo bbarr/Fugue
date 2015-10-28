@@ -3,10 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "kismatch": "0.0.2",
+    "kisschema": "^1.0.0",
+    "medium": "^0.2.1",
+    "ramda": "^0.18.0"
+  },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src/ --out-dir build/ --stage 1 --optional runtime",
+    "test": "mocha --watch --compilers js:babel/register"
   },
   "author": "",
   "license": "ISC"
